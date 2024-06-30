@@ -26,9 +26,9 @@ const AddPayment = ({ params }) => {
 
 
     const DetailForm = [
-        <AddressDetails nextTab={nextTab} cancelForm={cancelForm}/>,
-        <AccountDetails urlParams={urlParams} cancelForm={cancelForm} nextTab={nextTab}/>,
-        <BusinessDetails cancelForm={cancelForm} nextTab={nextTab}/>
+        <AddressDetails  key="address" nextTab={nextTab} cancelForm={cancelForm}/>,
+        <AccountDetails key="account" urlParams={urlParams} cancelForm={cancelForm} nextTab={nextTab}/>,
+        <BusinessDetails key="business" cancelForm={cancelForm} nextTab={nextTab}/>
     ]
     
     return (

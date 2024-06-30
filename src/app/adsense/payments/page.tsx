@@ -11,9 +11,9 @@ import EarningsHistory from './history/EarningsHistory';
 export default function Payments() {
     const [activeTab, setActiveTab] = useState(0);
     const PaymentsTabs = [
-        <WithdrawHome />,
-        <WithdrawalHistory />,
-        <EarningsHistory />
+        <WithdrawHome key="withdrawhome"/>,
+        <WithdrawalHistory key="withdrawhistory"/>,
+        <EarningsHistory key="earninghistory"/>
     ]
 
     const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {

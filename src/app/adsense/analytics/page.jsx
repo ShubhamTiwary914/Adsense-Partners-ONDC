@@ -1,7 +1,10 @@
+"use client";
 import { 
     Box, Typography
 } from "@mui/material"
-import BarGraph from "./../../components/graphs/BarGraph"
+import dynamic from 'next/dynamic';
+
+const BarGraph = dynamic(() => import('./../../components/graphs/BarGraph'), { ssr: false });
 import StatCard from "./../../components/ui/StatCard" 
 import * as performance from './performanceStats'
 import * as earnings from './earningsStats'
