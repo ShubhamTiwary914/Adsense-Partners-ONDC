@@ -38,54 +38,50 @@ export default function Register() {
         <ThemeProvider theme={defaultTheme}>
         <Container component="main" maxWidth="xs">
             <CssBaseline />
-            <Box sx={{
-                marginTop: 8,
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-            }}
-            >
-        
-            <Typography component="h1" variant="h5">
-                Login as Adsense Organisation
-            </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 10 }}>
-                <Grid container spacing={2}>
-                
-                <Grid item xs={12}>
-                    <TextField required fullWidth id="email" label="Email Address" name="email" autoComplete="email" /> 
-                </Grid>
-                <Grid item xs={12}>
-                    <TextField required fullWidth name="password" label="Password" type="password" id="password" autoComplete="new-password" />
-                </Grid>
+            <Box sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', boxShadow: 3, px: 5, py: 2, borderRadius: '5px 3px 0px 0px' }}>
+                <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+                        Adsense Login
+                </Typography>
+                <Typography variant="body1">
+                        Login as Adsense Organisation
+                </Typography>
+                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 10 }}>
+                    <Grid container spacing={2}>
+                    
+                    <Grid item xs={12}>
+                        <TextField required fullWidth id="email" label="Email Address" name="email" autoComplete="email" /> 
+                    </Grid>
+                    <Grid item xs={12}>
+                        <TextField required fullWidth name="password" label="Password" type="password" id="password" autoComplete="new-password" />
+                    </Grid>
 
-                <Grid item xs={12}>
-                    <Button type="submit" fullWidth variant="contained">
-                    Sign In
-                    </Button>
-                </Grid>
+                    <Grid item xs={12}>
+                        <Button type="submit" fullWidth variant="contained">
+                        Sign In
+                        </Button>
+                    </Grid>
 
-                <Grid item xs={12} sx={{ mt: 1 }}>
-                    <OrDivider/>
-                </Grid>
-                
-                <Grid item xs={12} sx={{ mt: 1 }}>
-                    <GoogleSignUpButton />
-                </Grid>
-                </Grid>
+                    <Grid item xs={12} sx={{ mt: 1 }}>
+                        <OrDivider/>
+                    </Grid>
+                    
+                    <Grid item xs={12} sx={{ mt: 1, mb: 1 }}>
+                        <GoogleSignUpButton />
+                    </Grid>
+                    </Grid>
 
-        
-                <Grid container justifyContent="flex-start">
-                <Grid item>
-                    <Link href="/auth/register/" variant="body2">
-                        Not Onboarded onto our Adsense? Join in Now
-                    </Link>
-                </Grid>
-                </Grid>
-            </Box>
+            
+                    <Grid container justifyContent="flex-start">
+                    <Grid item>
+                        <Link href="/auth/register/" variant="body2">
+                            Not Onboarded onto our Adsense? Join in Now
+                        </Link>
+                    </Grid>
+                    </Grid>
+                </Box>
             </Box>
 
-            <Copyright sx={{ mt: 5 }} />
+            <Copyright sx={{ mt: 2 }} />
         </Container>
         </ThemeProvider>
     );

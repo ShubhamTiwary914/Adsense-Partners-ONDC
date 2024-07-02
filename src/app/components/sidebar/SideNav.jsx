@@ -5,13 +5,17 @@ import { Box, Drawer, useMediaQuery, List, ListItem, ListItemIcon, ListItemText,
 import PageLinks from "@/app/utils/PageLinks";
 
 import { useSelectedLayoutSegments } from 'next/navigation';
-import orgLogo from './../../assets/logo/dummy-2.png';
+import orgLogo from './../../assets/logo/dummylogo.png';
 import Image from "next/image";
 
 
+const sideBar_BG = '#1d2a44'
+//light blue - #1A97f5
+
+
 const NAV_COLORS = {
-    "select": { backgroundColor: "#1A97f5", color: "white", borderRadius: 3 },
-    "unselect": { backgroundColor: "white", color: "black"}
+    "select": { backgroundColor: "white", color: "black", borderRadius: '5px 0px 0px 5px' },
+    "unselect": { backgroundColor: sideBar_BG, color: "white"}
 }
 
 
@@ -35,7 +39,8 @@ const Sidebar = (props) => {
     };
 
     const SidebarContent = (
-        <Box sx={{ p: 3, height: "calc(100vh - 40px)" }}>
+        <Box sx={{ p: 3, pr: 0, height: "100%",
+                backgroundColor: sideBar_BG, color: 'white' }}>
             <Box>
                 <Box sx={{ display: 'flex', displayDirection: 'row', ml: 2, mb: 10 }}>
                     <Image src={orgLogo} width={40} />

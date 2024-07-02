@@ -107,9 +107,9 @@ const WithdrawHome: React.FC = () => {
 
     return (
         <Container>
-            <Typography variant="h4" sx={{ marginBottom: 2 }}>Withdraw Earnings</Typography>
+            <Typography variant="h5" sx={{ marginBottom: 2 }}>Withdraw Earnings</Typography>
             <Typography variant="body1" sx={{ marginBottom: 2 }}>Available for withdrawals</Typography>
-            <Typography variant="h4" sx={{ marginBottom: 7 }}>Rs. 1200</Typography>
+            <Typography variant="h4" sx={{ marginBottom: 5 }}>Rs. 1200</Typography>
             <Typography variant="body1" sx={{ marginBottom: 2 }}>Start withdraw your Earnings</Typography>
             <Button variant="contained" sx={{ backgroundColor: 'black', color: 'white' }} onClick={handleOpen}>
                 Add Payout Method

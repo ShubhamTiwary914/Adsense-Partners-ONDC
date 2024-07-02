@@ -1,21 +1,25 @@
 import React from 'react';
-import { Card, CardContent, Typography, Avatar, Box } from '@mui/material';
-import Image from 'next/image';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
+import { Card, CardContent, Typography, SvgIconTypeMap, Box } from '@mui/material';
+import { OverridableComponent } from '@mui/material/OverridableComponent';
+
 
 interface StatCardProps {
     title: string;
     value: string;
-    image: StaticImport
+    Icon: OverridableComponent<SvgIconTypeMap<{}, "svg">>,
+    bg: string,
+    color: string
 }
 
-const StatCard: React.FC<StatCardProps> = ({ title, value, image }) => {
+const StatCard: React.FC<StatCardProps> = ({ title, value, Icon, bg, color }) => {
     return (
-        <Card variant="outlined" sx={{ width: '250px', margin: 1, borderRadius: 2, backgroundColor: '#1A97f5', color: 'white' }}>
+        <Card variant="outlined" sx={{ width: '230px', margin: 1, borderRadius: 2, boxShadow: 2}}>
         <CardContent>
             <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}> 
-                <Image src={image} width={50} alt="stat-icon"/>
-                <Box sx={{ mx: 5 }}>
+                <Box sx={{ width: 70, height: 70, borderRadius: '50%', backgroundColor: bg, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Icon sx={{ color: color, fontSize: 40 }} />
+                </Box>
+                <Box sx={{ mx: 2 }}>
                     <Typography variant="subtitle1">{title}</Typography>
                     <Typography variant="h5" component="div">{value}</Typography>
                 </Box>

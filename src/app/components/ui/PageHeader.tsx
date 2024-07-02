@@ -12,8 +12,8 @@ export default function PageHeader({ title, subtitle  }){
     return (
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2 }}>
             <Box>
-                <Typography variant="h5"> {title} </Typography>
-                <Typography variant="subtitle1"> {subtitle} </Typography>
+                <Typography variant="h6"> {title} </Typography>
+                <Typography variant="body2"> {subtitle} </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center" }}>
                 <IconButton sx={{ mx: 3 }}>
