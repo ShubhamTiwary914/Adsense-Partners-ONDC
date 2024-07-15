@@ -1,4 +1,5 @@
-const baseURL = "http://localhost:3001"
+const baseURL = process.env.BASEAPI_URL;
+
 
 import * as org from './apis/org';
 import * as analytics from './apis/analytics';

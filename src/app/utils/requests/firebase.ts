@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBG6d6_SlUIXOPO2SP8m98s6T9bVqF_ICc",
-    authDomain: "yardstick-adsense-buyer.firebaseapp.com",
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTHDOMAIN,
     projectId: "yardstick-adsense-buyer",
-    storageBucket: "yardstick-adsense-buyer.appspot.com",
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET,
     messagingSenderId: "758919589527",
-    appId: "1:758919589527:web:2c7f150e66d6c6262003d2",
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
     measurementId: "G-MN9Q7T572R"
 };
 
