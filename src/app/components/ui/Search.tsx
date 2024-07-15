@@ -7,7 +7,7 @@ import {
 } from "@mui/material"
 
 import SearchIcon from '@mui/icons-material/Search';
-import ClearIcon from '@mui/icons-material/Clear';
+
 
 
 
@@ -29,24 +29,24 @@ const TypeSearch: FunctionComponent = () => {
         <div id="app">
         <FormControl>
             <TextField
-            size="small"
-            variant="outlined"
-            onChange={handleChange}
-            InputProps={{
-                startAdornment: (
-                <InputAdornment position="start">
-                    <SearchIcon />
-                </InputAdornment>
-                ),
-                endAdornment: (
-                <InputAdornment
-                    position="end"
-                    style={{ display: showClearIcon }}
-                    onClick={handleClick}
-                >
-                </InputAdornment>
-                )
-            }}
+                size="small"
+                onChange={handleChange}
+                sx={{ border: '0.2px solid black', borderRadius: 2 }}
+                InputProps={{
+                    startAdornment: (
+                    <InputAdornment position="start">
+                        <SearchIcon />
+                    </InputAdornment>
+                    ),
+                    endAdornment: (
+                    <InputAdornment
+                        position="end"
+                        style={{ display: showClearIcon }}
+                        onClick={handleClick}
+                    >
+                    </InputAdornment>
+                    )
+                }}
             
             />
         </FormControl>

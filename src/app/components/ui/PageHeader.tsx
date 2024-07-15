@@ -11,16 +11,12 @@ import Search from './Search'
 export default function PageHeader({ title, subtitle  }){
     return (
         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", p: 2 }}>
-            <Box>
-                <Typography variant="h6"> {title} </Typography>
-                <Typography variant="body2"> {subtitle} </Typography>
-            </Box>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            {/* <Box sx={{ display: "flex", alignItems: "center" }}>
                 <IconButton sx={{ mx: 3 }}>
                     <NotificationsActiveOutlinedIcon />
                 </IconButton>  
                 <Search/>
-            </Box>
+            </Box> */}
         </Box>
     );
 };

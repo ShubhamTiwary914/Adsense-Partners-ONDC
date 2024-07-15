@@ -11,8 +11,7 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-import Link from "@mui/material";
-
+import PATH from "@/app/constant/ROUTES";
 
 
 const activities = [
@@ -20,19 +19,19 @@ const activities = [
         header: "Fill out KYC",
         text: "Organisation Details to Get Started with Payment & Ads",
         color: "#4a5ee5",
-        page: '/adsense/settings/kyc'
+        page: `${PATH.settings}kyc`
     },
     {
         header: "Earnings Checkout",
         text: "Payment Method for Earnings Withdrawal",
         color: "#eb5c4b",
-        page: '/adsense/payments/'
+        page: PATH.payments
     },
     {
         header: "Place Ad Units",
         text: "Start Placing Ads onto your Buyer App",
         color: "#a66cff",
-        page: '/adsense/ads/'
+        page: PATH.ads
     }
 ];
 
@@ -42,7 +41,7 @@ const CustomStepper = () => {
         <Box>
             <Timeline sx={{ [`& .${timelineItemClasses.root}:before`]: { flex: 0, padding: 0,}}}>
             {activities.map((activity, index) => (
-                    <TimelineItem key={activity.time}>
+                    <TimelineItem key={index}>
                         <TimelineSeparator>
                             <TimelineDot variant="outlined" sx={{ borderColor: activity.color }} />
                             {
