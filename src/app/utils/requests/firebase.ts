@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 
 
 const firebaseConfig = {
-    apiKey: process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
-    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTHDOMAIN,
+    apiKey: process.env.FIREBASE_APIKEY,
+    authDomain: process.env.FIREBASE_AUTHDOMAIN,
     projectId: "yardstick-adsense-buyer",
-    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET,
+    storageBucket: process.env.FIREBASE_STORAGEBUCKET,
     messagingSenderId: "758919589527",
-    appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
+    appId: process.env.FIREBASE_APPID,
     measurementId: "G-MN9Q7T572R"
 };
 
